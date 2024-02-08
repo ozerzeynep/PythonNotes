@@ -196,6 +196,94 @@ else:
     
     
     
+basit = 5000
+if basit == 3000:
+    print("Değer Doğru")
+else:
+    print("Değer yanlış")
+
+
+soru = "Lisans'mı yoksa Yüksek Lisans öğrencisimisiniz?"
+cevap = input("Cevabınızı Giriniz :")
+if cevap == "Lisans":
+    print("Lisans öğrencileri için olan içerikler.")
+elif cevap == "Yüksek Lisans":
+    print("Yüksek lisans öğrencileri için olan içerikler.")
+else:
+    print("Geçersiz Bir İfade Girildi")
+
+#Sıcaklık Kontrolü 1. Yol
+deger = int(input("Hissedilen sıcaklığı giriniz :"))
+gercek_sicaklik = 15
+if deger == gercek_sicaklik:
+    print("Tahmininiz Doğrudur")
+elif deger < gercek_sicaklik:
+    print("Gerçek sıcaklığa göre daha soğuk hissediyorsunuz")
+elif deger > gercek_sicaklik:
+    print("Gerçek sıcaklığa göre ortam sıcaklığını daha fazla hissediyorsunuz")
+else:
+    print("Geçersiz ifade girişi yaptınız, tekrar deneyiniz.")
+
+#Sıcaklık Kontrolü 2. Yol
+sicaklik = float(input("Sıcaklık girin: "))
+
+if sicaklik > 30:
+    print("Hava sıcak!")
+elif sicaklik <= 30 and sicaklik > 20:
+    print("İdeal hava sıcaklığı.")
+else:
+    print("Hava serin.")
+
+
+#Kullanıcı giriş kontrolü
+kullanici_adi = input("Kullanıcı adınızı giriniz : ")
+sifre = input("Kullanıcı şifrenizi giriniz : ")
+
+if kullanici_adi == "Zeynep" and sifre == "1234":
+    print("Sisteme giriş yapıldı.")
+elif kullanici_adi == "Zeynep":
+    print("Hatalı şifre girildi, tekrardan deneyiniz")
+elif sifre == "1234":
+    print("Hatalı kullanıcı adı girildi tekrardan deneyiniz.")
+else: 
+    print("Kullanıcı adı ve şifre hatalıdır, tekrardan deneyiniz") 
+
+
+#Sayı kontrolü
+sayi = int(input("Bir sayı giriniz :"))
+if sayi > 0:
+    print("Pozitif sayıdır.")
+elif sayi < 0:
+    print("Negatif sayıdır.")
+else:
+    print("Sayı 0 dır")
+
+#Not ortalaması işlemi
+not_ortalamasi = float(input("Not ortalamasını girin: "))
+
+if not_ortalamasi >= 90:
+    print("AA")
+elif not_ortalamasi >= 80:
+    print("BA")
+elif not_ortalamasi >= 70:
+    print("BB")
+elif not_ortalamasi >= 60:
+    print("CB")
+else:
+    print("FF - Kaldınız.")
+
+#Mağazanın aylık ciro kontrol sistemi
+magaza_adi = str(input("Mağaza adınızı giriniz : "))
+aylik_ciro = int(input("Aylık cironuzu giriniz : "))
+
+if aylik_ciro >= 50000:
+    print("Tebrikler, promosyon kazanan mağaza {}".format(magaza_adi))
+elif aylik_ciro >= 30000:
+    print("Tebrikler, hediye kazanan mağaza {}".format(magaza_adi))
+elif aylik_ciro >= 10000:
+    print("Tebrikler, kupon kazanan mağaza {}".format(magaza_adi))
+else:
+    print("Ciro oldukça düşük olan mağaza {} olarak seçilmiştir.".format(magaza_adi))
 
 
 
