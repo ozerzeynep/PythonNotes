@@ -1,7 +1,19 @@
-#SET VERİ TİPİ
+#SET VERİ TİPİ (KÜMELER)
+#Sırasızdır / Değerleri eşsizdir / Değiştirilebilirdir / Farklı tipleri barındırabilir / Tekrar eden değerlerin hepsini almaz sadece bir tanesini alır.
 sayilar = {2,4,8,14}
 print(sayilar)
 print(type(sayilar))
+
+a = ["Ali", "Ayşe", "Ali", "Ayla"]
+c = set(a)
+print(a)
+
+p = {"Ali", "Eslem", "Eslem"}
+print(p)
+print(p.add("Zeynep"))      #Set veri yapısına ekleme işlemi yapıldı
+print(p)
+print(p.remove("Eslem"))    # Set veri yapısında silme işlemi yapıldı
+print(p.discard("Eslem"))   #Eslem değerini ilk başta sildiğimiz için tekrar silmek istediğimizde bize hata verecektir ama biz hata almak istemiyorsak tamam set içinde yoksa hiçbir işlem yapmasın istiyorsak 'discard' ifadesini kullanırız
 
 set1 = {1,2,3}
 set2 = {3,4,5}
@@ -14,11 +26,31 @@ print(intersection_set)     #sette kesişimi yani ortak olan değeri bizlere ver
 different_set = set1.difference(set2)
 print(different_set)        #set veri tipindeki farkı bulur
 
+
+deger1 = {1,2,3,4,5}
+deger2 = {1,2,3,5,6,7}
+karsilastir = deger1.difference(deger2)   #fark işlemini yapar burada deger1 de olup deger2 olmayan ifadeleri getirir
+print(karsilastir)
+karsilastir2 = deger1.symmetric_difference(deger2)  #burda da ikisinde de ortak olmayan ifadeleri getirir
+print(karsilastir2)
+karsilastir3 = deger2 - deger1  #Çıkartma işareti ile de aynı işlemi gerçekleştirebiliriz
+print(karsilastir3)
+bosmu = deger1.isdisjoint(deger2)  #İki kümenin kesişimini boş olup olmadığını döndürür
+print(bosmu)
+update = deger1.intersection_update(deger2) #Burada değerleri güncellemiş olduk
+print(update)
+altKume = deger1.issubset(deger2) #Burada deger1 deger2'nin alt kümesimidir diye sorulmuş oldu(Bir küme diğer kümeyi kapsıyormu kapsamıyormu onun sorgusunu yapar)
+print(altKume)
+print("*********************************************************************************")
+
 #TUPLE VERİ TİPİ
 #DEĞİŞTİRİLEMEYEN VERİ TİPLERİDİR
 tup = ('a','b', 'c')
 print(tup)
 print(type(tup))
+
+t = ("Deger",)  #Eğer ki tek değerli bir tuple oluşturuyorsanız sonuna virgül koymak zorundasınız
+print(type(t))
 
 #veriler = ("Ali","Ahmet","Alparslan","Arda","Arif")
 #veriler[0] = "Ayşe"
@@ -112,18 +144,17 @@ print(stok.items())
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+sınavlar = {
+    'Vize_Notu' : 80,
+    'Final_Notu' : 55,
+    'Büt_Notu' : 'Girmedi',
+    'Ogrenci_Bilgisi': {
+        'Ogrenci_Adi' : 'Eylül Aydın',
+        'Ogrenci_Bolumu' : 'Yönetim Bilişim Sistemleri',
+        'Ogrenci_Dogum_Tarihi' : '2001.11.05'
+    }
+}
+print(sınavlar)
+print(sınavlar.keys())
+print(sınavlar.values())
+print(sınavlar.copy())
