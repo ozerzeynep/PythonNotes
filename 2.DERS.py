@@ -205,6 +205,31 @@ max_urun = max(urun_stok_miktarı)
 print(min_urun)
 print(max_urun)
 
+kisi = ["Ali", "Veli", "Ayşe", "Fatma", "Nuriye"]
+del kisi[2]                     #silme işlemini 'del' ile yapmış olduk
+print(kisi)
+
+
+print(dir(liste))      #listelerin tüm metodlarını bu şekilde göre biliriz
+
+sube_kisileri = ["Ceren", "Fadime", "Uğur", "Karya"]
+print(sube_kisileri.insert(1,"Zeynep"))     #instert ifadesi ile istediğimiz index'e değer ekleriz 
+print(sube_kisileri)
+
+len(sube_kisileri)
+print(sube_kisileri.insert(len(sube_kisileri),"Seren")) #uzunluğunu bilmetdiğim bir liste olduğunu 
+print(sube_kisileri)                                #varsayarsak eğer bu şekilde son kısma istediğim elemanı
+                                                    #ekleyebilirim
+
+
+alan = [30,8,96,78,25,14,520]
+print(alan.sort())   #Listeyi küçükten büyüğe sıralar
+print(alan)
+print(alan.sort(reverse=True))  #Listeyi büyükten küçüğe sıralar
+print(alan)
+
+
+
 
 
 
