@@ -86,6 +86,49 @@ for sayi1,sayi2 in liste:
     print(sayi1*sayi2)
     
 
+#MAAŞLARA %20 ZAM YAPILACAKTIR GEREKLİ KODALIR YAZINIZ
+
+maaslar = [20.000,40.000,50.000,60.000]
+
+def yeni_maas(x):
+    print(x*20/100 + x)
+
+for i in maaslar:
+    yeni_maas(i)
+
+
+maaslar1 = [10.000,20.000,30.000,40.000,50.000,60.000,70.000,80.000,90.000]
+
+def ust_sınır(x):
+    print(x*10/100 + x)
+
+def alt_sınır(x):
+    print(x*20/100 + x)
+
+for i in maaslar1:
+    if i >= 30.000:
+        ust_sınır(i)
+    
+    else:
+        alt_sınır(i)
+
+
+print("-----------------------------------------------------")
+
+sınıf_mevcudu = ["Ece Dönmez", "Ali Cenk", "Atakan Gelgör", "Cemre Altın", "Sude Okan"]
+
+for i in sınıf_mevcudu:
+    if sınıf_mevcudu == "Merve Akın":
+        print("Merve Akın bu sınıftadır.")
+    
+    else:
+        print("Merve Akın bu sınıfta değildir.")
+        sınıf_mevcudu.append("Merve Akın")
+        print("Merve Akın sınıfa eklendi".format(sınıf_mevcudu))
+        break
+print(sınıf_mevcudu)
+    
+
 
 
 
